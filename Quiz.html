@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Holiday Me</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="SelectJava.js"></script>
+	</head>
+<body>
+	<div class="navbar-static-top navbar-inverse" id="home">
+		<div class="container">
+			<div class="navbar-brand">
+				<?php 
+session_start();
+if($_SESSION['logged'] == true){ 
+    echo    $_SESSION["username"] ;
+    echo '   <a href="../index.php"><span> Logout</span></a></li>';
+}
+else {
+    echo '<a href="Form.php"><span>Login/Register</span></a></li>';
+}
+?>
+			</div>
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+				Menu
+			</button>
+			<div class="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="Quiz.html">Quiz</a></li>
+					<li><a href="Locations.html">Locations</a></li>
+					<li><a href="Form.php">Registration</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Quiz</h1>
+			<p>Take our quiz to find out your ideal holiday location.</p>
+			<p>It's completely free!</p>
+		</div>
+	</div>
+	
+	
+	<div class="alt1 padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p  id="cost">How much (MAX.) are you willing to spend on your holiday?:</p>
+ <select id="amount" onchange="myAmount()" >
+<option value="">
+  <option style="color: black;" value="less">Less than 1500
+  <option style="color: black;" value="more">1500 or more
+
+
+</select>
+
+
+						<p id="1" style="display:none">Do you have an interest in sports?</p>
+
+<select id="mySelect" onchange="myFunction()" style="display:none">
+<option value="">
+  <option style="color: black;" value="No">No
+  <option style="color: black;" value="Yes">Yes
+  <option style="color: black;" value="Indifferent">Indifferent
+
+</select>
+
+
+
+
+
+<p id="2" style="display:none">Are you likely to bring home more luggage than you left with?</p>
+
+<select id="mySelect2" onchange="myFunction2()" style="display:none">
+<option value="">
+  <option style="color: black;" value="No">No
+  <option style="color: black;" value="Yes">Yes
+
+
+</select>
+
+
+
+
+
+<p id="3" style="display:none">Are you willing to travel long distances?</p>
+
+<select id="mySelect3" onchange="myFunction3()" style="display:none">
+<option value="">
+  <option style="color: black;" value="No">No
+  <option style="color: black;" value="Yes">Yes
+
+
+</select>
+
+
+
+
+
+
+<p id="4" style="display:none">Do you enjoy relaxing holidays?</p>
+
+<select id="mySelect4" onchange="myFunction4()" style="display:none">
+<option value="">
+  <option style="color: black;" value="No">No
+  <option style="color: black;" value="Yes">Yes
+
+
+</select>
+
+
+<!--
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+<p id="p4"></p>
+<p id="p5"></p> -->
+
+<p id="hiddenp" style="display:none">Would you see yourself going on vacation in a theme park?</p>
+
+<select id="mySelect5" onchange="myFunction5()" style='display:none' >
+<option value="">
+  <option style="color: black;" value="No">No
+  <option style="color: black;" value="Yes">Yes
+
+
+</select>
+
+
+
+
+
+
+<p id="hiddenp2" style="display:none">Which do you rather? HOT WEATHER or COLD WEATHER</p>
+
+<select id="mySelect6" onchange="myFunction6()" style='display:none' >
+<option value="">
+  <option style="color: black;" value="hot">Hot Weather
+  <option style="color: black;" value="cold">Cold Weather
+
+
+</select>
+
+<p id="hiddenp3" style="display:none">Which do you rather? HOT WEATHER or COLD WEATHER</p>
+<p id="hiddenp3/2" style="display:none">Which do you rather? HOT WEATHER or COLD WEATHER</p>
+
+<select id="mySelect7" onchange="myFunction7()" style='display:none' >
+<option value="">
+  <option style="color: black;" value="hot">Hot Weather
+  <option style="color: black;" value="cold">Cold Weather
+
+
+</select>
+
+
+<p id="hiddenp4" style="display:none">Do you like animals?</p>
+
+<select id="mySelect8" onchange="myFunction8()" style='display:none' >
+<option value="">
+  <option style="color: black;" value="Yes">Yes
+  <option style="color: black;" value="No">No
+
+
+</select>
+
+<p id="less1" style="display:none">Do you have an interest in sports?</p>
+
+<select id="lessmySelect" onchange="myFunctionless()" style="display:none">
+<option value="">
+  <option style="color: black;" value="No">No
+  <option style="color: black;" value="Yes">Yes
+  <option style="color: black;" value="Indifferent">Indifferent
+
+</select>
+
+<p id="less2" style="display:none">Would you go on holiday in a holiday resort?</p>
+
+<select id="lessmySelect2" onchange="myFunctionless2()" style='display:none' >
+<option value="">
+  <option style="color: black;" value="Yes">Yes
+  <option style="color: black;" value="No">No
+
+
+</select>
+
+<p id="less3" style="display:none">Would you rather fly or get a boat?</p>
+
+<select id="lessmySelect3" onchange="myFunctionless3()" style='display:none' >
+<option value="">
+  <option style="color: black;" value="fly">Fly
+  <option style="color: black;" value="boat">Boat
+
+
+</select>
+
+<p id="less4" style="display:none">Which currency would be easier for you?</p>
+
+<select id="lessmySelect4" onchange="myFunctionless4()" style='display:none' >
+<option value="">
+  <option style="color: black;" value="euros">Euros (€)
+  <option style="color: black;" value="pounds">Pounds (£)
+
+
+</select>
+
+			</div>
+</div>
+			</div>
+			</div>
+	
+	
+	
+	<div class="alt2">
+		<div class="container">
+			<footer>
+				&copy; Holiday Me <br />
+				<a href="#home">Back to top</a>
+			</footer>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script>
+	$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+	</script>
+	</body>
+</html>

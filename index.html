@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Holiday Me</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+	<div class="navbar-static-top navbar-inverse" id="home">
+		<div class="container">
+			<div class="navbar-brand">
+				<?php 
+session_start();
+if($_SESSION['logged'] == true){ 
+    echo    $_SESSION["username"] ;
+    echo '   <a href="../index.php"><span> Not you? Logout</span></a>';
+}
+else {
+    echo '<a href="Form.php"><span>Login/Register</span></a>';
+}
+?>
+			</div>
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+				Menu
+			</button>
+			<div class="collapse navbar-collapse navHeaderCollapse">
+			<div class="dropdown">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="Quiz.html">Quiz</a></li>
+					<li><a href="Locations.html">Locations</a></li>
+					<li><a href="Form.php">Registration</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Holiday Me!</h1>
+			<p>Struggling to find out where you should go on holiday? We've got you covered!</p>
+			<p>Take our quiz and find out your dream holiday destination!</p>
+			<p><a href="Quiz.html"Quiz target="_blank" class="btn btn-primary btn-lg">Take our quiz!</a></p>
+		</div>
+	</div>
+	
+	
+	<div class="alt1 padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="images/orlando.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+			</div>
+			
+
+			<div class="col-md-6">
+				<h2 class="text-center">Featured Location</h2>
+				<p class="text-justify">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+				<a href="#two" class="btn btn-default">Tell me more..</a>
+			</div>
+			
+		
+		</div>
+	</div>	
+	</div>
+	
+	<div class="alt2">
+	<div class="container" id="portfolio">
+			<div class="col-md-6">
+				<h2 class="text-center">Featured Hotel</h2>
+				</h3 class="text-center">Floridays Orlando</h3>
+				<p class="text-justify">Floridays is a a luxury, all-suite condominium-style resort in Orlando, FL. Floridays Resort Orlando is located in the heart of the action in Lake Buena Vista on International Drive, just a few miles from attractions and only steps away from sensational shopping and dining. One of the best Orlando Resorts near Disney Award-winning, excellent customer service Perfect for your next Orlando condo rental, family vacation, or holiday stay Spacious and grand all-suite luxury accommodations Vibrant Mediterranean decor in our two- and three-bedroom suites Flat screen TVs, fully-equipped kitchen, and two luxurious bathrooms, one with a Jacuzzi tub. Cafe & Marketplace and Pool Bar </p>
+				
+			</div>
+		<div class="row padding" id="one">
+			<div class="col-md-6">
+				<img src="images/FloridaysOrlando.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+			</div>
+			
+		</div>	
+		<hr />
+		
+	
+
+	
+	<div class="alt2">
+		<div class="container">
+			<footer>
+				&copy; Holiday Me <br />
+				<a href="#home">Back to top</a>
+			</footer>
+		</div>
+	</div>
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script>
+	$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+	</script>
+	</body>
+</html>

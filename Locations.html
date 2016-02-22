@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Holiday Me</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+<body>
+	<div class="navbar-static-top navbar-inverse" id="home">
+		<div class="container">
+			<div class="navbar-brand">
+				<?php 
+session_start();
+if($_SESSION['logged'] == true){ 
+    echo    $_SESSION["username"] ;
+    echo '   <a href="../index.php"><span> Logout</span></a></li>';
+}
+else {
+    echo '<a href="Form.php"><span>Login/Register</span></a></li>';
+}
+?>
+			</div>
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+				Menu
+			</button>
+			<div class="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="Quiz.html">Quiz</a></li>
+					<li><a href="Locations.html">Locations</a></li>
+					<li><a href="Form.php">Registration</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Locations</h1>
+			<p>Here is the list of the locations that you can possibly get in our quiz.</p>
+		</div>
+	</div>
+	
+	<div class="alt1 padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="images/AbuDhabi.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+			</div>
+			
+
+			<div class="col-md-6">
+				<h2 class="text-center">Abu Dhabi</h2>
+				<p class="text-justify">Abu Dhabi is the capital and second most populous city in the United Arab Emirates. Abu Dhabi lies on a T-shaped island jutting into the Persian Gulf from the Centeral western coast.</p>
+				<a href="AbuDhabi.html" class="btn btn-default">Tell me more..</a>
+			</div>
+			
+		
+		</div>
+	</div>	
+	</div>
+	
+	
+	<div class="alt1 padding">
+	<div class="container">
+		<div class="row">
+		
+		<div class="col-md-6">
+				<h2 class="text-center">Australia</h2>
+				<p class="text-justify">Australia is a country comprising the mainland of the Australian continent, the island of Tasmania, and numerous smaller islands. It is the world's sixth-largest country by total area. Neighbouring countries include Indonesia, East Timor and Papua New Guinea to the north; the Solomon Islands and Vanuatu to the north-east; and New Zealand to the south-east.</p>
+				<a href="Australia.html" class="btn btn-default">Tell me more..</a>
+			</div>
+			
+			<div class="col-md-6">
+				<img src="images/Australia.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+			</div>
+			
+		</div>
+	</div>	
+	</div>
+	
+	<div class="alt1 padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="images/disneylandparis.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+			</div>
+			
+
+			<div class="col-md-6">
+				<h2 class="text-center">Disneyland (Paris)</h2>
+				<p class="text-justify">Disneyland Paris, originally Euro Disney Resort, is an entertainment resort in Marne-la-Vallee, a new town located 32 km (20 mi) east of the centre of Paris, and is the most visited attraction in all of France and Europe</p>
+				<a href="DisneyLand.html" class="btn btn-default">Tell me more..</a>
+			</div>
+			
+		
+		</div>
+	</div>	
+	</div>
+	
+	<div class="alt1 padding">
+	<div class="container">
+		<div class="row">
+		
+		<div class="col-md-6">
+				<h2 class="text-center">Florida (USA)</h2>
+				<p class="text-justify">Florida is a state in the southeastern region of the United States, bordered to the west by the Gulf of Mexico, to the north by Alabama and Georgia, to the east by the Atlantic Ocean, and to the south by the Straits of Florida. Florida is the 22nd most extensive, the 4th most populous, and the 8th most densely populated of the 50 United States. The state capital is Tallahassee, the largest city is Jacksonville, and the largest metropolitan area is the Miami metropolitan area.</p>
+				<a href="Florida.html" class="btn btn-default">Tell me more..</a>
+			</div>
+			
+			<div class="col-md-6">
+				<img src="images/florida.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+			</div>
+			
+		</div>
+	</div>	
+	</div>
+	
+	
+		<div class="alt1 padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="images/Switzerland.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+			</div>
+			
+
+			<div class="col-md-6">
+				<h2 class="text-center">Switzerland</h2>
+				<p class="text-justify">Switzerland has existed as a state in its present form since the adoption of the Swiss Federal Constitution in 1848. The precursors of Switzerland established a protective alliance at the end of the 13th century (1291), forming a loose confederation of states which persisted for centuries.</p>
+				<a href="Switzerland.html" class="btn btn-default">Tell me more..</a>
+			</div>
+			
+		
+		</div>
+	</div>	
+	</div>
+	
+	<div class="alt1 padding">
+	<div class="container">
+		<div class="row">
+		
+		<div class="col-md-6">
+				<h2 class="text-center">Trabolgan</h2>
+				<p class="text-justify">Trabolgan Holiday Village Cork is the ultimate family holiday with great accommodation and a host of indoor and outdoor family activities and entertainment</p>
+				<a href="Trabolgan.html" class="btn btn-default">Tell me more..</a>
+			</div>
+			
+			<div class="col-md-6">
+				<img src="images/Trabolgan.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+			</div>
+			
+		</div>
+	</div>	
+	</div>
+	
+	<div class="alt1 padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="images/Butlins.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+			</div>
+			
+
+			<div class="col-md-6">
+				<h2 class="text-center">Butlins</h2>
+				<p class="text-justify">Butlins is a chain of large holiday camps in the United Kingdom. Butlins was founded by Billy Butlin to provide affordable holidays for ordinary British families. </p>
+				<a href="Butlins.html" class="btn btn-default">Tell me more..</a>
+			</div>
+			
+		
+		</div>
+	</div>	
+	</div>
+	
+	<div class="alt2">
+		<div class="container">
+			<footer>
+				&copy; Holiday Me <br />
+				<a href="#home">Back to top</a>
+			</footer>
+		</div>
+	</div>
+	
+	
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script>
+	$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+	</script>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Holiday Me</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+	<div class="navbar-static-top navbar-inverse" id="home">
+		<div class="container">
+			<div class="navbar-brand">
+				<?php 
+session_start();
+if($_SESSION['logged'] == true){ 
+    echo    $_SESSION["username"] ;
+    echo '   <a href="../index.php"><span> Logout</span></a></li>';
+}
+else {
+    echo '<a href="Form.php"><span>Login/Register</span></a></li>';
+}
+?>
+			</div>
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+				Menu
+			</button>
+			<div class="collapse navbar-collapse navHeaderCollapse">
+			<div class="dropdown">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="Quiz.html">Quiz</a></li>
+					<li><a href="Locations.html">Locations</a></li>
+					<li><a href="Form.php">Registration</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Switzerland</h1>
+			<p>Switzerland has existed as a state in its present form since the adoption of the Swiss Federal Constitution in 1848. The precursors of Switzerland established a protective alliance at the end of the 13th century (1291), forming a loose confederation of states which persisted for centuries.</p>
+			<p><a href="http://www.myswitzerland.com/en/home.html"Quiz target="_blank" class="btn btn-primary btn-lg">Check out their tourism website</a></p>
+		</div>
+	</div>
+	
+	<div class="alt1 padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="images/hotelpost.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+			</div>
+			
+
+			<div class="col-md-6">
+				<h2 class="text-center">Unique Hotel Post</h2>
+				<p class="text-justify">Unique Hotel Post is situated in the centre of Zermatt, a 5-minute walk from the train station. There is free Wi-Fi in the rooms. Some of the rooms boast views of the Matterhorn. They have high-quality wooden furniture and luxuriously appointed bathrooms. The small spa area includes a sauna, a steam bath and a hot tub. Massages can also be booked. Italian cuisine is served at the Spaghetti and Pizza Factory. Other venues are the Broken Tex Mex Grill, the gourmet Portofino Restaurant and the Brown Cow Snack Bar, serving a wide range of delicious meals and snacks. The bars and clubs of the Unique Hotel Post serve a carefully chosen range of alcoholic and non-alcoholic beverages in a relaxed atmosphere. On arrival and departure, a free transfer service to and from the Zermatt Train Station, the Zermatt Taxi Stand and the Zermatt Heliport is offered between 08:00 and 17:00. Zermatt is a car-free village</p>
+				<a href="http://www.hotelpost.ch/home.html" class="btn btn-default">Tell me more..</a>
+			</div>
+			
+		
+		</div>
+	</div>	
+	</div>
+	
+	<div class="alt1 padding">
+	<div class="container">
+		<div class="row">
+		
+		<div class="col-md-6">
+				<h2 class="text-center">Ramada Hotel Z&uuml;rich-City</h2>
+				<p class="text-justify">Situated in the district of Zurich-West and offering private underground parking and easy connection by public transport, Ramada Hotel Zurich City is directly opposite the Letzigrund Stadium. Guests can unwind in a lobby bar offering cocktails, a selection of wine and tapas. The multifunctional rooms feature free WiFi, a free bottle of water, a flat-screen satellite TV and a hairdryer. The Ramada Zurich features a gym at your disposal. Guests can reach Zurich's Main Train Station within 15 minutes with the tram number 2 and then switch to tram number 14. Apart from the main stock exchange centre and banking headquarters, Zurich's attractions vary from museums to a rich night life.</p>
+				<a href="http://www.ramada.com/hotels/switzerland/zurich/ramada-zurich-city/hotel-overview" class="btn btn-default">Tell me more..</a>
+			</div>
+			
+			<div class="col-md-6">
+				<img src="images/ramanda.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+			</div>
+			
+		</div>
+	</div>	
+	</div>
+	
+	<div class="alt2">
+		<div class="container">
+			<footer>
+				&copy; Holiday Me <br />
+				<a href="#home">Back to top</a>
+			</footer>
+		</div>
+	</div>
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script>
+	$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+	</script>
+	</body>
+</html>

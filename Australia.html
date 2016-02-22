@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Holiday Me</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+	<div class="navbar-static-top navbar-inverse" id="home">
+		<div class="container">
+			<div class="navbar-brand">
+				<?php 
+session_start();
+if($_SESSION['logged'] == true){ 
+    echo    $_SESSION["username"] ;
+    echo '   <a href="../index.php"><span> Logout</span></a></li>';
+}
+else {
+    echo '<a href="Form.php"><span>Login/Register</span></a></li>';
+}
+?>
+			</div>
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+				Menu
+			</button>
+			<div class="collapse navbar-collapse navHeaderCollapse">
+			<div class="dropdown">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="Quiz.html">Quiz</a></li>
+					<li><a href="Locations.html">Locations</a></li>
+					<li><a href="Form.php">Registration</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Australia</h1>
+			<p>Australia is a country comprising the mainland of the Australian continent, the island of Tasmania, and numerous smaller islands. It is the world's sixth-largest country by total area. Neighbouring countries include Indonesia, East Timor and Papua New Guinea to the north; the Solomon Islands and Vanuatu to the north-east; and New Zealand to the south-east.</p>
+			<p><a href="http://www.australia.com/"Quiz target="_blank" class="btn btn-primary btn-lg">Check out their tourism website</a></p>
+		</div>
+	</div>
+	
+	<div class="alt1 padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="images/vibe.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+			</div>
+			
+
+			<div class="col-md-6">
+				<h2 class="text-center">Vibe Hotel Carlton</h2>
+				<p class="text-justify">For those who want to discover Melbourne's cultural diversity and heritage architecture, Vibe Hotel Carlton is the place to be. Offering a swimming pool, sauna and a fitness centre, it is 15 minutes’ tram ride from the city centre. A 20-minute walk from the Vibe Hotel Carlton takes you to Lygon Street, where the city's famous cafe culture was born, and Brunswick, a melting pot of cultures with great ethnic restaurants. Vibe Hotel Carlton is a 5-minute walk from Melbourne Zoo and 10 minutes’ walk from the University of Melbourne. Royal Melbourne Hospital is 5 minutes' drive away and it is 7 minutes' drive to Moonee Valley Racecourse.</p>
+				<a href="http://www.tfehotels.com/brands/vibe-hotels/vibe-hotel-carlton-melbourne" class="btn btn-default">Tell me more..</a>
+			</div>
+			
+		
+		</div>
+	</div>	
+	</div>
+	
+	<div class="alt1 padding">
+	<div class="container">
+		<div class="row">
+		
+		<div class="col-md-6">
+				<h2 class="text-center">Adina Apartment Hotel Sydney</h2>
+				<p class="text-justify">Featuring an indoor heated swimming pool, a fitness centre and sauna facilities, Adina Apartment Hotel is located in the heart of Sydney. It offers air-conditioned apartments and studios with a private balcony. The spacious accommodation at Adina Apartment Hotel Sydney features modern décor, cable TV and kitchen or kitchenette facilities. All have large windows, and some offer stunning views of the city skyline. Sydney Adina Hotel is a 2-minute walk from Town Hall Railway Station, offering access to all of Sydney’s top attractions. Darling Harbour and Chinatown are both within a 5-minute walk. It is a 25-minute drive from Sydney International Airport.</p>
+				<a href="http://www.tfehotels.com/brands/adina-apartment-hotels/adina-apartment-hotel-sydney" class="btn btn-default">Tell me more..</a>
+			</div>
+			
+			<div class="col-md-6">
+				<img src="images/Adina.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+			</div>
+			
+		</div>
+	</div>	
+	</div>
+	
+	
+	<div class="alt2">
+		<div class="container">
+			<footer>
+				&copy; Holiday Me <br />
+				<a href="#home">Back to top</a>
+			</footer>
+		</div>
+	</div>
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script>
+	$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+	</script>
+	</body>
+</html>
